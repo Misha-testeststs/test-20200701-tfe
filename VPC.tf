@@ -4,7 +4,7 @@ variable "test-vpc-cidr" {
 }
 
 resource "aws_vpc" "test-vpc" {
-  cidr_block           = "var.test-vpc-cidr"
+  cidr_block           = var.test-vpc-cidr
   enable_dns_hostnames = true
 
   tags = {
